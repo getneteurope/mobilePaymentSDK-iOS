@@ -1,0 +1,6 @@
+framework module SDKPayeComScanner {
+  umbrella header "SDKPayeComScanner.h"
+
+  export *
+  module * { export * }
+}

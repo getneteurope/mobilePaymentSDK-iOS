@@ -1,0 +1,6 @@
+framework module SDKPayeComSEPA {
+  umbrella header "SDKPayeComSEPA.h"
+
+  export *
+  module * { export * }
+}

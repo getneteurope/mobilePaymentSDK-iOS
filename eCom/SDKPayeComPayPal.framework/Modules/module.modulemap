@@ -1,0 +1,6 @@
+framework module SDKPayeComPayPal {
+  umbrella header "SDKPayeComPayPal.h"
+
+  export *
+  module * { export * }
+}
