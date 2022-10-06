@@ -1,0 +1,87 @@
+[
+    {
+        "name": "visa",
+        "brandImage": "visa",
+        "securityCodeValidLength": 3,
+        "numberOptimalLengths": 16,
+        "numberValidLengths": [
+            13,
+            16,
+            17,
+            18,
+            19
+        ],
+        "numberFormat": [
+            3,
+            7,
+            11,
+            15
+        ],
+        "binPrefixes": [
+            "4"
+        ]
+    },
+    {
+        "name": "mastercard",
+        "brandImage": "mastercard",
+        "securityCodeValidLength": 3,
+        "numberOptimalLengths": 16,
+        "numberValidLengths": [
+            16
+        ],
+        "numberFormat": [
+            3,
+            7,
+            11,
+            15
+        ],
+        "binPrefixes": [
+            "2221",
+            "2222",
+            "2223",
+            "2224",
+            "2225",
+            "2226",
+            "2227",
+            "2228",
+            "2229",
+            "223",
+            "224",
+            "225",
+            "226",
+            "227",
+            "228",
+            "229",
+            "23",
+            "24",
+            "25",
+            "26",
+            "270",
+            "271",
+            "2720",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55"
+        ]
+    },
+    {
+        "name": "amex",
+        "brandImage": "american_express",
+        "brandImageSecurityCode": "security_code_amex",
+        "securityCodeValidLength": 4,
+        "numberOptimalLengths": 15,
+        "numberValidLengths": [
+            15
+        ],
+        "numberFormat": [
+            3,
+            9
+        ],
+        "binPrefixes": [
+            "34",
+            "37"
+        ]
+    }
+]

@@ -1,0 +1,6 @@
+framework module SDKPayeComWireTransfer {
+  umbrella header "SDKPayeComWireTransfer.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,10 @@
+source 'https://github.com/CocoaPods/Specs.git'
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
+platform :ios, '12.0'
+
+target 'Example' do
+  use_frameworks!
+  
+  pod 'mobilePaymentSDK', :path => '../'
+end

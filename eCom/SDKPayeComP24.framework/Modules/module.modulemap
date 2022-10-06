@@ -1,0 +1,6 @@
+framework module SDKPayeComP24 {
+  umbrella header "SDKPayeComP24.h"
+
+  export *
+  module * { export * }
+}
