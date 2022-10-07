@@ -19,7 +19,7 @@ DESC
     s.documentation_url= 'https://docs.getneteurope.com/_mobile_payment_sdk.html#_ios_sdk'
     s.license          = { :type => 'MIT' }
     s.authors          = { 'Get Net Europe' => 'connect@getneteurope.com' }
-    s.source           = { :git => 'https://github.com/getneteurope/mobilePaymentSDK-iOS.git', :tag => "#{s.version}" }
+    s.source           = { :git => 'https://github.com/getneteurope/mobilePaymentSDK-iOS.git', :tag => "v#{s.version}" }
     s.platform         = :ios
     s.ios.deployment_target = '12.0'
     s.requires_arc     = true
