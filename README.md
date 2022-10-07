@@ -1,3 +1,3 @@
 # mobilePaymentSDK-iOS
 
-For integration visit [docs](https://docs.getneteurope.com/)
+For integration visit [docs](https://docs.getneteurope.com/MobilePaymentSDK.html)
