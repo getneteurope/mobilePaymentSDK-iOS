@@ -1,0 +1,6 @@
+framework module SDKPayeComPhotoGallery {
+  umbrella header "SDKPayeComPhotoGallery.h"
+
+  export *
+  module * { export * }
+}

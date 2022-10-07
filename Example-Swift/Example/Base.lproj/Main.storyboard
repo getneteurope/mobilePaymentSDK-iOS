@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mGk-0u-Eyt">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="3Tq-Xt-tPE">
+            <objects>
+                <viewController id="juo-wU-jQL" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yGN-4X-hl1"/>
+                        <viewControllerLayoutGuide type="bottom" id="pgI-Rv-93k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2IC-ad-8b2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFg-mS-alX">
+                                <rect key="frame" x="192" y="433" width="30" height="30"/>
+                                <state key="normal" title="Pay"/>
+                                <connections>
+                                    <action selector="onPay:" destination="juo-wU-jQL" eventType="touchUpInside" id="zJc-MS-oCT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aFg-mS-alX" firstAttribute="centerX" secondItem="2IC-ad-8b2" secondAttribute="centerX" id="ZcA-y7-Bra"/>
+                            <constraint firstItem="aFg-mS-alX" firstAttribute="centerY" secondItem="2IC-ad-8b2" secondAttribute="centerY" id="vjC-0s-n96"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hX7-RG-aVJ"/>
+                    <connections>
+                        <outlet property="payButton" destination="aFg-mS-alX" id="azz-Ku-K2N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eVC-xh-LpR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="145" y="139"/>
+        </scene>
+        <!--Animated CardfieldVC-->
+        <scene sceneID="7yo-YU-fh5">
+            <objects>
+                <viewController storyboardIdentifier="AnimatedCardfieldVC" id="EqV-WG-h59" customClass="AnimatedCardfieldVC" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jqK-xk-w9g"/>
+                        <viewControllerLayoutGuide type="bottom" id="QdX-AG-SuV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NTS-wc-rUI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgd-Tf-15W" customClass="SDKPayECAnimatedCardFieldScannerGallery">
+                                <rect key="frame" x="20" y="52" width="374" height="320"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dgd-Tf-15W" secondAttribute="height" multiplier="187:160" id="yoc-Zt-p72"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="EqV-WG-h59" id="fVW-Xm-3JL"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jsy-Az-wGN">
+                                <rect key="frame" x="28" y="380" width="30" height="30"/>
+                                <state key="normal" title="Pay"/>
+                                <connections>
+                                    <action selector="onPayAction:" destination="EqV-WG-h59" eventType="touchUpInside" id="5gy-2l-UYG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KZT-cf-AfL">
+                                <rect key="frame" x="186.5" y="418" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0AV-DI-J0h">
+                                <rect key="frame" x="350" y="380" width="36" height="30"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="onClearAction:" destination="EqV-WG-h59" eventType="touchUpInside" id="uKd-z4-p3U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KZT-cf-AfL" firstAttribute="top" secondItem="Jsy-Az-wGN" secondAttribute="bottom" constant="8" id="BnU-0i-TOG"/>
+                            <constraint firstItem="0AV-DI-J0h" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Jsy-Az-wGN" secondAttribute="trailing" constant="8" symbolic="YES" id="TnU-bw-FCu"/>
+                            <constraint firstItem="Jsy-Az-wGN" firstAttribute="top" secondItem="dgd-Tf-15W" secondAttribute="bottom" constant="8" id="Wo9-gh-RST"/>
+                            <constraint firstItem="dgd-Tf-15W" firstAttribute="leading" secondItem="NTS-wc-rUI" secondAttribute="leading" constant="20" id="c3q-Lj-5MS"/>
+                            <constraint firstItem="0AV-DI-J0h" firstAttribute="centerY" secondItem="Jsy-Az-wGN" secondAttribute="centerY" id="e6x-W0-gHK"/>
+                            <constraint firstItem="dgd-Tf-15W" firstAttribute="top" secondItem="jqK-xk-w9g" secondAttribute="bottom" constant="8" id="fuq-DN-jMw"/>
+                            <constraint firstItem="KZT-cf-AfL" firstAttribute="centerX" secondItem="NTS-wc-rUI" secondAttribute="centerX" id="gpv-jt-hUa"/>
+                            <constraint firstItem="Jsy-Az-wGN" firstAttribute="leading" secondItem="NTS-wc-rUI" secondAttribute="leadingMargin" constant="8" id="jAp-sP-jPp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0AV-DI-J0h" secondAttribute="trailing" constant="8" id="pYh-Dq-TtX"/>
+                            <constraint firstAttribute="trailing" secondItem="dgd-Tf-15W" secondAttribute="trailing" constant="20" id="zU9-Pc-x45"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animatedCardfield" destination="dgd-Tf-15W" id="wkA-xZ-goQ"/>
+                        <outlet property="animatedCardfieldStateLabel" destination="KZT-cf-AfL" id="5bA-4Z-31K"/>
+                        <outlet property="clearBtn" destination="0AV-DI-J0h" id="a4Q-l6-x4m"/>
+                        <outlet property="payBtn" destination="Jsy-Az-wGN" id="nTK-y3-KeP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WP6-NA-IDn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="965.60000000000002" y="417.8410794602699"/>
+        </scene>
+        <!--CardfieldVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="CardfieldVC" id="BYZ-38-t0r" customClass="CardfieldVC" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgy-cU-JLT">
+                                <rect key="frame" x="192" y="433" width="30" height="30"/>
+                                <state key="normal" title="Pay"/>
+                                <connections>
+                                    <action selector="onPayAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4ES-r9-MQ2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVb-xP-zDf">
+                                <rect key="frame" x="189" y="213" width="36" height="30"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="onClearAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c1g-88-OWv"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GRX-HT-3ed" customClass="SDKPayECCardFieldScannerGallery">
+                                <rect key="frame" x="20" y="52" width="374" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Llo-5d-duv"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Qdt-sc-gbA"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jh0-zk-5b6">
+                                <rect key="frame" x="20" y="130" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="5ua-PJ-83r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jh0-zk-5b6" firstAttribute="leading" secondItem="GRX-HT-3ed" secondAttribute="leading" id="6Xe-0z-uVV"/>
+                            <constraint firstItem="Jh0-zk-5b6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BTt-m7-A0c"/>
+                            <constraint firstItem="gVb-xP-zDf" firstAttribute="top" secondItem="Jh0-zk-5b6" secondAttribute="bottom" constant="62" id="DaU-Rg-vZi"/>
+                            <constraint firstItem="GRX-HT-3ed" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="It4-CT-y1Y"/>
+                            <constraint firstItem="Jh0-zk-5b6" firstAttribute="top" secondItem="GRX-HT-3ed" secondAttribute="bottom" constant="8" id="O5b-fd-Cfo"/>
+                            <constraint firstItem="tgy-cU-JLT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PpS-LX-h1r"/>
+                            <constraint firstItem="Jh0-zk-5b6" firstAttribute="trailing" secondItem="GRX-HT-3ed" secondAttribute="trailing" id="RDv-1q-RyH"/>
+                            <constraint firstItem="tgy-cU-JLT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fUv-ni-XES"/>
+                            <constraint firstItem="gVb-xP-zDf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kIV-oA-fs9"/>
+                            <constraint firstItem="Jh0-zk-5b6" firstAttribute="centerX" secondItem="gVb-xP-zDf" secondAttribute="centerX" id="yVU-dA-IUC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardField" destination="GRX-HT-3ed" id="0z9-0U-yEo"/>
+                        <outlet property="cardFieldStateLabel" destination="Jh0-zk-5b6" id="2R7-26-96i"/>
+                        <outlet property="clearBtn" destination="gVb-xP-zDf" id="S84-iR-kEh"/>
+                        <outlet property="payBtn" destination="tgy-cU-JLT" id="Re2-qb-mYs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="961" y="-261"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2oO-4I-T22">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mGk-0u-Eyt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jAw-5f-WWY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="juo-wU-jQL" kind="relationship" relationship="rootViewController" id="7db-od-YIZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MsM-x2-Fbx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-658" y="139"/>
+        </scene>
+    </scenes>
+</document>

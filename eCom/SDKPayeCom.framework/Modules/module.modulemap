@@ -1,0 +1,6 @@
+framework module SDKPayeCom {
+  umbrella header "SDKPayeCom.h"
+
+  export *
+  module * { export * }
+}

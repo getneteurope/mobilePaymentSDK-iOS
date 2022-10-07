@@ -1,0 +1,6 @@
+framework module SDKPayeComAlipay {
+  umbrella header "SDKPayeComAlipay.h"
+
+  export *
+  module * { export * }
+}
