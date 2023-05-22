@@ -6,8 +6,10 @@ phrase:
     - file: ./<locale_code>.lproj/Localizable.strings
       params:
         file_format: strings
+        format_options: { convert_placeholder: true }
   pull:
     targets:
     - file: ./<locale_code>.lproj/Localizable.strings
       params:
         file_format: strings
+        format_options: { convert_placeholder: true }

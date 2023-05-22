@@ -3,7 +3,7 @@
 //  SDKPayeCom
 //
 //  Created by Sedlak, Stefan on 10/8/15.
-//  Copyright © 2022 PagoNxt Merchant Solutions S.L. and Santander España Merchant Services, Entidad de Pago, S.L.U.  All rights reserved.
+//  Copyright © 2023 PagoNxt Merchant Solutions S.L. and Santander España Merchant Services, Entidad de Pago, S.L.U. You may not use this file except in compliance with the License which is available at https://mit-license.org/
 //
 
 #import <Foundation/Foundation.h>
@@ -37,6 +37,12 @@
  *  @details Initialization SDKPayECPayment object is useful only for [SDKPayECClient checkPayment:] method.
  */
 @interface SDKPayECPayment : NSObject
+
+/**
+ *  @brief one time password
+    @details It is optional.
+ */
+@property (copy, nonatomic, nonnull) NSString *oneTimePassword;
 
 /**
  *  @brief 2nd generation signature. Authorize client to process the transaction. checkPayment works only with this signature.
@@ -237,6 +243,14 @@
 - (nullable instancetype)initWithMerchantAccountID:(nonnull NSString *)merchantAccountID
                                          requestID:(nonnull NSString *)requestID
                                          signature:(nonnull NSString *)signature;
+
+
+/**
+ @brief initialize payment with dictionary from JSOM payment object
+ @param dict payment dictionary
+ @return Returns payment object for SDKPayECClient.
+ */
+- (nullable instancetype)initWithDictionary:(nonnull NSDictionary<NSString *,id> *)dict;
 
 /**
  @brief Returns the notification for transaction state.

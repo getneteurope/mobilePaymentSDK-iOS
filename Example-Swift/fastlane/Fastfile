@@ -1,0 +1,76 @@
+default_platform(:ios)
+
+platform :ios do
+  desc "Builds and deploys Example App to TestFairy"
+  lane :buildTestfairy do
+    sh("pod install")
+    version = get_version_number(xcodeproj: "Example.xcodeproj")
+    build_number = get_build_number(xcodeproj: "Example.xcodeproj")
+    build_app(
+      workspace: "Example.xcworkspace",
+      scheme: "Example",
+      clean: true,
+      export_method: "ad-hoc",
+      output_name: "Example-#{version}_#{build_number}.ipa",
+      export_options: ({
+        provisioningProfiles: {
+          "com.axelgate.Example" => "Example adhoc"
+        }
+      })
+    )
+    testfairy(
+      api_key: "e590ac6f76ff006c4745190ce073d90de10ded6f",
+      ipa: "./Example-#{version}_#{build_number}.ipa",
+      comment: "Build #{version}_#{build_number}",
+    )
+  end
+  desc "Builds and deploys Example App to TestFlight"
+  lane :buildTestflight do |options|
+    sh("pod install")
+    version = get_version_number(xcodeproj: "Example.xcodeproj")
+    build_number = get_build_number(xcodeproj: "Example.xcodeproj")
+    build_app(
+      workspace: "Example.xcworkspace",
+      scheme: "Example",
+      clean: true,
+      export_method: "app-store",
+      output_name: "Example-#{version}_#{build_number}.ipa",
+      export_options: ({
+        provisioningProfiles: {
+          "com.axelgate.Example" => "Example appstore"
+        }
+      })
+    )
+    upload_to_testflight(
+      api_key_path: options[:apiKeyPath],
+      app_identifier: "com.axelgate.Example",
+      apple_id: "6443986594",
+      ipa: "Example-#{version}_#{build_number}.ipa",
+      skip_submission: false,
+      changelog: "",
+      beta_app_review_info: {
+        contact_email: "example@example.com",
+        contact_first_name: "Example",
+        contact_last_name: "Example",
+        contact_phone: "+421111111111",
+      },
+      localized_app_info: {
+        "default": {
+          feedback_email: "default@email.com",
+          marketing_url: "https://example.com/marketing-defafult",
+          privacy_policy_url: "https://example.com/privacy-defafult",
+          description: "Default description",
+        },
+        "en-US": {
+          feedback_email: "en-gb@email.com",
+          marketing_url: "https://example.com/marketing-en-gb",
+          privacy_policy_url: "https://example.com/privacy-en-gb",
+          description: "en-gb description",
+        }
+      },
+      uses_non_exempt_encryption: false,
+      skip_waiting_for_build_processing: false,
+      groups: ["internalgroup"]
+    )
+  end
+end
