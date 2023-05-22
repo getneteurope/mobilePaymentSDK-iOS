@@ -1,0 +1,6 @@
+framework module SDKPayeComBlik {
+  umbrella header "SDKPayeComBlik.h"
+
+  export *
+  module * { export * }
+}

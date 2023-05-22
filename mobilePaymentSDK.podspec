@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'mobilePaymentSDK'
-    s.version          = '1.0.0'
+    s.version          = '1.1.0'
     s.summary          = 'Getneteurope paymentSDK - online payments'
 
     s.description      = <<-DESC
@@ -12,9 +12,14 @@ Supported payment methods:
 - POI/PIA Wire Transfer
 - AliPay Cross-border WAP
 - P24 payments
+- Sofort banking
+- RatePay
+- Sofort
+- Blik
+- Bizum - redirect
 Fully integrated with licensed GetNetEurope Payment infrastructure.
 DESC
-    
+
     s.homepage         = 'https://github.com/getneteurope/mobilePaymentSDK-iOS'
     s.documentation_url= 'https://docs.getneteurope.com/_mobile_payment_sdk.html#_ios_sdk'
     s.license          = { :type => 'MIT' }
@@ -22,9 +27,9 @@ DESC
     s.source           = { :git => 'https://github.com/getneteurope/mobilePaymentSDK-iOS.git', :tag => "v#{s.version}" }
     s.platform         = :ios
     s.ios.deployment_target = '12.0'
+    s.swift_version = '4.2'
     s.requires_arc     = true
-
-
+    
     s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
     s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
@@ -35,6 +40,11 @@ DESC
         ss.dependency            'mobilePaymentSDK/WireTransfer'
         ss.dependency            'mobilePaymentSDK/Alipay'
         ss.dependency            'mobilePaymentSDK/P24'
+        ss.dependency            'mobilePaymentSDK/RatePay'
+        ss.dependency            'mobilePaymentSDK/Sofort'
+        ss.dependency            'mobilePaymentSDK/Blik'
+        ss.dependency            'mobilePaymentSDK/Bizum'
+
     end
 
     s.subspec 'Core' do |ss|
@@ -42,12 +52,16 @@ DESC
         ss.resource            = 'eCom/SDKPayeCom.framework/SDKPayeCom.bundle'
 
         ss.dependency            'AFNetworking', '~> 4.0.1'
-        ss.dependency            'CocoaLumberjack', '~> 3.6.1'
+        ss.dependency            'CocoaLumberjack', '~> 3.7.4'
         ss.ios.dependency        'Lockbox', '~> 3.0.6'
-        ss.dependency            'Mantle', '~> 2.1.1'
+        ss.dependency            'Mantle', '~> 2.1.6'
         ss.ios.dependency        'MBProgressHUD', '~> 1.2.0'
         ss.dependency            'libextobjc/EXTScope', '~> 0.6.0'
-        ss.ios.dependency        'TPKeyboardAvoiding', '~> 1.3.3'
+        ss.ios.dependency        'TPKeyboardAvoiding', '~> 1.3.5'
+        ss.dependency            'MaterialComponents/TextControls+FilledTextAreas'
+        ss.dependency            'MaterialComponents/TextControls+FilledTextFields'
+        ss.dependency            'MaterialComponents/TextControls+FilledTextAreasTheming'
+        ss.dependency            'MaterialComponents/TextControls+FilledTextFieldsTheming'
 
         ss.ios.frameworks      = 'Foundation', 'UIKit', 'Security'
         ss.libraries           = 'xml2'
@@ -136,7 +150,7 @@ DESC
         ss.dependency            'mobilePaymentSDK/IBANScanner'
         ss.dependency            'mobilePaymentSDK/PhotoGallery'
     end
-    
+
     s.subspec 'WireTransfer' do |ss|
         ss.vendored_frameworks = 'eCom/SDKPayeComWireTransfer.framework'
         ss.resource            = 'eCom/SDKPayeComWireTransfer.framework/SDKPayeComWireTransfer.bundle'
@@ -144,6 +158,33 @@ DESC
         ss.dependency            'mobilePaymentSDK/Core'
     end
 
-      s.default_subspecs = 'All', 'CardScannerGallery'
+    s.subspec 'RatePay' do |ss|
+        ss.vendored_frameworks = 'eCom/SDKPayeComRatePay.framework'
+        ss.resource            = 'eCom/SDKPayeComRatePay.framework/SDKPayeComRatePay.bundle'
+
+        ss.dependency            'mobilePaymentSDK/Core'
+    end
+
+    s.subspec 'Sofort' do |ss|
+        ss.vendored_frameworks = 'eCom/SDKPayeComSofort.framework'
+
+        ss.dependency            'mobilePaymentSDK/Core'
+    end
+
+    s.subspec 'Blik' do |ss|
+        ss.vendored_frameworks = 'eCom/SDKPayeComBlik.framework'
+        ss.resource            = 'eCom/SDKPayeComBlik.framework/SDKPayeComBlik.bundle'
+
+        ss.dependency            'mobilePaymentSDK/Core'
+    end
+
+    s.subspec 'Bizum' do |ss|
+        ss.vendored_frameworks = 'eCom/SDKPayeComBizum.framework'
+        ss.resource            = 'eCom/SDKPayeComBizum.framework/SDKPayeComBizum.bundle'
+
+        ss.dependency            'mobilePaymentSDK/Core'
+    end
+
+    s.default_subspecs = 'All', 'CardScannerGallery'
 
 end
