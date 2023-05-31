@@ -206,9 +206,9 @@ class ViewController: PaymemtVC, UIActionSheetDelegate {
          @Warning: We ask you to never share your Secret Key with anyone, or store it inside your application or phone. This is crucial to ensure the security of your transactions.
          You will be generating the signature on your own server’s backend, as it is the only place where you will store your Secret Key.
          */
-        let SDKPay_MERCHANT_ACCOUNT_ID = "7848757e-63a0-423b-a6b9-04883abb6cfb"
-        let SDKPay_MERCHANT_SECRET_KEY = "e94ad911-4324-40e9-8647-682a7bff7b74"
-        
+        let SDKPay_MERCHANT_ACCOUNT_ID = "5c4a8a42-04a8-4970-a595-262f0ba0a108"
+        let SDKPay_MERCHANT_SECRET_KEY = "5ac555d4-e7f7-409f-8147-d82c8c10ed53"
+
         self.merchantSignedPaymentByMerchantSecretKey(merchantAccountID: SDKPay_MERCHANT_ACCOUNT_ID, payment: payment, merchantSecretKey: SDKPay_MERCHANT_SECRET_KEY)
         
         return payment
@@ -307,8 +307,8 @@ class ViewController: PaymemtVC, UIActionSheetDelegate {
         payment.order = order;
         payment.locale = locale_de ? SDKPayECLocale._de : SDKPayECLocale._en
         
-        let SDKPay_MERCHANT_ACCOUNT_ID = "0e79dd5d-b570-4fc5-94cd-dd7cf08c0e21"
-        let SDKPay_MERCHANT_SECRET_KEY = "6587e997-5057-4ce0-a8ef-d7cf0ab6faca"
+        let SDKPay_MERCHANT_ACCOUNT_ID = "ALIPAY_MAID"
+        let SDKPay_MERCHANT_SECRET_KEY = "ALIPAY_SECRET"
         
         self.merchantSignedPaymentByMerchantSecretKey(merchantAccountID: SDKPay_MERCHANT_ACCOUNT_ID, payment: payment, merchantSecretKey: SDKPay_MERCHANT_SECRET_KEY)
         
@@ -437,7 +437,18 @@ class ViewController: PaymemtVC, UIActionSheetDelegate {
         let accountHolder = SDKPayECCustomerData.init()
         accountHolder.firstName = "John"
         accountHolder.lastName = "Doe"
-        accountHolder.email = "klsjfak@klsdjflks.sk"
+        accountHolder.email = "john.doe@email.com"
+        accountHolder.phone = "03018425165"
+        accountHolder.gender = SDKPayECGender.female
+        
+        let address = SDKPayECAddress()
+        address.country = SDKPayECCountry.DE
+        address.city = "Testhausen"
+        address.postalCode = "13353"
+        address.state = "DE"
+        address.street1 = "Nicht Versenden Str. 5"
+        accountHolder.address = address
+        
         payment.accountHolder = accountHolder
         
         var cartOrder = [SDKPayECOrderItem]()
