@@ -3,7 +3,7 @@
 //  SDKPayeCom
 //
 //  Created by Sedlak, Stefan on 10/8/15.
-//  Copyright © 2023 PagoNxt Merchant Solutions S.L. and Santander España Merchant Services, Entidad de Pago, S.L.U. You may not use this file except in compliance with the License which is available at https://mit-license.org/
+//  Copyright © 2022 PagoNxt Merchant Solutions S.L. and Santander España Merchant Services, Entidad de Pago, S.L.U.  All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -42,10 +42,7 @@
  */
 @property (strong, nonatomic) NSDecimalNumber *amount;
 
-/**
- @brief ammount  currency
- @details It is optional
- */
+// TODO: remove
 @property (assign, nonatomic) SDKPayECCurrency amountCurrency;
 
 /**
@@ -54,11 +51,6 @@
  */
 @property (strong, nonatomic) NSDecimalNumber *taxAmount;
 
-/**
- @brief tax currency
- @details It is optional
- */
-@property (assign, nonatomic) SDKPayECCurrency taxAmountCurrency;
 /**
  @brief tax rate
  @details It is optional

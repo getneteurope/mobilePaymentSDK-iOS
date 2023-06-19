@@ -3,7 +3,7 @@
 //  SDKPayeCom
 //
 //  Created by Sedlak, Stefan on 10/8/15.
-//  Copyright © 2023 PagoNxt Merchant Solutions S.L. and Santander España Merchant Services, Entidad de Pago, S.L.U. You may not use this file except in compliance with the License which is available at https://mit-license.org/
+//  Copyright © 2022 PagoNxt Merchant Solutions S.L. and Santander España Merchant Services, Entidad de Pago, S.L.U.  All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -92,6 +92,54 @@
  * This field is required if available, unless market or regional mandate   restricts sending this information.
  */
 @property (strong, nonatomic, nullable) SDKPayECWorkPhone *workPhone;
+
+/**
+ * City portion of the shipping   address requested by the Cardholder.
+ * This field is required unless shipping information is the same as billing   information, or market or regional mandate restricts sending this   information.
+ */
+@property (strong, nonatomic, nullable) NSString *shippingCity;
+
+/**
+ * Country of the shipping address   requested by the Cardholder.
+ * This field is limited to 3 characters. This value shall be the ISO   3166-1 numeric country code, except values from range 901 - 999 which are   reserved by ISO.
+ * This field is required if Cardholder Shipping Address State is present and if   shipping information are not the same as billing information. This field   can be omitted if market or regional mandate restricts sending this   information.
+ */
+@property (strong, nonatomic, nullable) NSString *shippingCountry;
+
+/**
+ * First line of the street address   or equivalent local portion of the shipping address associated with the   card use for this purchase.
+ * This field is limited to maximum 50 characters.
+ * This field is required unless shipping information is the same as billing   information, or market or regional mandate restricts sending this   information.
+ */
+@property (strong, nonatomic, nullable) NSString *shippingStreet1;
+
+/**
+ * Second line of the street address   or equivalent local portion of the shipping address associated with the   card use for this purchase.
+ * This field is limited to maximum 50 characters.
+ * This field is required unless shipping information is the same as billing   information, or market or regional mandate restricts sending this   information.
+ */
+@property (strong, nonatomic, nullable) NSString *shippingStreet2;
+
+/**
+ * Third line of the street address   or equivalent local portion of the shipping address associated with the   card use for this purchase.
+ * This field is limited to maximum 50 characters.
+ * This field is required unless shipping information is the same as billing   information, or market or regional mandate restricts sending this   information.
+ */
+@property (strong, nonatomic, nullable) NSString *shippingStreet3;
+
+/**
+ * ZIP or other postal code of the   shipping address associated with the card used for this purchase.
+ * This field is limited to maximum 16 characters.
+ * This field is required unless shipping information is the same as billing   information, or market or regional mandate restricts sending this   information.
+ */
+@property (strong, nonatomic, nullable) NSString *shippingPostalCode;
+
+/**
+ * The state or province of the   shipping address associated with the card used for this purchase.
+ * This field is limited to 3 characters. The value should be the country   subtivision code defined in ISO 3166-2.
+ * This field is required unless shipping information is the same as billing   information, or State is not applicable for this country, or market or   regional mandate restricts sending this information.
+ */
+@property (strong, nonatomic, nullable) NSString *shippingState;
 
 @end
 

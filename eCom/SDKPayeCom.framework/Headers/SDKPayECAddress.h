@@ -3,7 +3,7 @@
 //  SDKPayeCom
 //
 //  Created by Sedlak, Stefan on 10/8/15.
-//  Copyright © 2023 PagoNxt Merchant Solutions S.L. and Santander España Merchant Services, Entidad de Pago, S.L.U. You may not use this file except in compliance with the License which is available at https://mit-license.org/
+//  Copyright © 2022 PagoNxt Merchant Solutions S.L. and Santander España Merchant Services, Entidad de Pago, S.L.U.  All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -53,36 +53,11 @@
  @details It is optional. Max. length is 16
  */
 @property (strong, nonatomic, nullable) NSString *postalCode;
-
-/**
- @brief House number of the recipient’s address.
- @details It is optional. Max. length is 32
- */
-@property (strong, nonatomic, nullable) NSString *houseNumber;
-
 /**
  @brief House extension of the recipient’s address.
  @details It is optional. Max. length is 32
  */
 @property (strong, nonatomic, nullable) NSString *houseExtension;
-
-/**
- @brief Block number of the recipient’s address.
- @details It is optional. Max. length is 32
- */
-@property (strong, nonatomic, nullable) NSString *blockNumber;
-
-/**
- @brief Level of the recipient’s address.
- @details It is optional. Max. length is 32
- */
-@property (strong, nonatomic, nullable) NSString *level;
-
-/**
- @brief Unit of the recipient’s address.
- @details It is optional. Max. length is 32
- */
-@property (strong, nonatomic, nullable) NSString *unit;
 
 @end
 

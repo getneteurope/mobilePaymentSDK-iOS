@@ -3,7 +3,7 @@
 //  SDKPayeCom
 //
 //  Created by Vrana, Jozef on 19/09/2018.
-//  Copyright © 2023 PagoNxt Merchant Solutions S.L. and Santander España Merchant Services, Entidad de Pago, S.L.U. You may not use this file except in compliance with the License which is available at https://mit-license.org/
+//  Copyright © 2022 PagoNxt Merchant Solutions S.L. and Santander España Merchant Services, Entidad de Pago, S.L.U.  All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -113,7 +113,7 @@
  @brief The currency of non taxable net amount.
  @details It is mandatory if non taxable net amount is specified.
  */
-@property (strong, nonatomic, nullable ) NSString *currency;
+@property (strong, nonatomic) NSString *currency;
 
 /** Number of passengers
  @brief The number of passengers on the airline transaction.

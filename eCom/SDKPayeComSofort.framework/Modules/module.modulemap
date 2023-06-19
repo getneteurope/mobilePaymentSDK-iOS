@@ -1,6 +1,0 @@
-framework module SDKPayeComSofort {
-  umbrella header "SDKPayeComSofort.h"
-
-  export *
-  module * { export * }
-}

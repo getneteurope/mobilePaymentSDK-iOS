@@ -3,7 +3,7 @@
 //  SDKPayeCom
 //
 //  Created by Sedlak, Stefan on 7/11/16.
-//  Copyright © 2023 PagoNxt Merchant Solutions S.L. and Santander España Merchant Services, Entidad de Pago, S.L.U. You may not use this file except in compliance with the License which is available at https://mit-license.org/
+//  Copyright © 2022 PagoNxt Merchant Solutions S.L. and Santander España Merchant Services, Entidad de Pago, S.L.U.  All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -43,30 +43,6 @@ typedef NS_ENUM (NSUInteger, SDKPayECPaymentMethodName) {
 
     /** P24 */
     SDKPayECPaymentMethodNameP24,
-    
-    /** Ideal */
-    SDKPayECPaymentMethodNameIdeal,
-    
-    /** Sofort */
-    SDKPayECPaymentMethodNameSofort,
-    
-    /** RatePay Elv */
-    SDKPayECPaymentMethodNameRatePayElv,
-    
-    /** RatePay Invoice */
-    SDKPayECPaymentMethodNameRatePayInvoice,
-
-    /** Blik */
-    SDKPayECPaymentMethodNameBlik,
-    
-    /** Bizum */
-    SDKPayECPaymentMethodNameBizum,
-    
-    /** MBWay */
-    SDKPayECPaymentMethodNameMBWay,
-    
-    /** Zinia */
-    SDKPayECPaymentMethodNameZinia,
 
     /** Total number of values. It is used for validation and handled as invalid value */
     SDKPayECPaymentMethodNameTotalNumber

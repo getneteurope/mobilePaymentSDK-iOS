@@ -10,23 +10,23 @@
 		</data>
 		<key>SDKPayECAnimatedCardField.nib</key>
 		<data>
-		eY4oD27UzVHQli/Sj7PwUYgCU+g=
+		0AEnmUIY1X4+KxWOFkVJM3LyZCw=
 		</data>
 		<key>SDKPayECCardPaymentAnimationVC.nib/objects-11.0+.nib</key>
 		<data>
-		YPGt+MCnfsbipUYcDfPUDe9FaDc=
+		chxGY3aDC01w17HArsvKNVNIypo=
 		</data>
 		<key>SDKPayECCardPaymentAnimationVC.nib/runtime.nib</key>
 		<data>
-		9UxkXxbHCQzpIRPVxfnATQmjgmU=
+		XyPvDAqDPMr+sRq7jn/zLMDrSc4=
 		</data>
 		<key>SDKPayECCardPaymentVC.nib/objects-11.0+.nib</key>
 		<data>
-		jWjRPCM5dK7LfNlT3lKJG/d4dIk=
+		1AgNxQx7ZGywSFekxTxIlGpp3tE=
 		</data>
 		<key>SDKPayECCardPaymentVC.nib/runtime.nib</key>
 		<data>
-		ycfJAc2DtPA5iVcwILysfajyCaw=
+		GFS1W8syIXQUYXQQpC1LlTx7ddI=
 		</data>
 		<key>SDKPayECOTPCodeVC.nib</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>cardInfo.json</key>
 		<data>
-		AV2lubKrQu/om0ySO7uGKS+5SQs=
+		KkZGAIW+ObIpVUxR5YP0t421EAE=
 		</data>
 		<key>icons/american_express@2x.png</key>
 		<data>
@@ -72,13 +72,9 @@
 		<data>
 		GRyGdI4RqXxV6ButcL/QY4hwPBU=
 		</data>
-		<key>icons/diners_club2@2x.png</key>
-		<data>
-		UFyLNl37oD4CXsLh+xJvC/I3s3g=
-		</data>
 		<key>icons/diners_club@2x.png</key>
 		<data>
-		Urw0GEKaLjEzP6AlrC5JHC5QCNM=
+		UFyLNl37oD4CXsLh+xJvC/I3s3g=
 		</data>
 		<key>icons/discover@2x.png</key>
 		<data>
@@ -156,10 +152,6 @@
 		<data>
 		nDyN6hS2IKx7T+92jFdwwnFOEmg=
 		</data>
-		<key>icons/vpay@2x.png</key>
-		<data>
-		s0WYiARIuDO9NVlzq9eIakcNjow=
-		</data>
 		<key>images/recognized_back.png</key>
 		<data>
 		KPeFtKXvAy0P8AxKIv3P++J06r8=
@@ -192,13 +184,9 @@
 		<data>
 		QCwtSPFEv843dXY9JkgypDmWJp0=
 		</data>
-		<key>logos/dinersLogo2@2x.png</key>
-		<data>
-		FsI0Xcu8oS6BCwB1KpGIIO+eleU=
-		</data>
 		<key>logos/dinersLogo@2x.png</key>
 		<data>
-		DUDqtVQ7ad+Gm/VdLr68SgN4PEo=
+		FsI0Xcu8oS6BCwB1KpGIIO+eleU=
 		</data>
 		<key>logos/discoverLogo@2x.png</key>
 		<data>
@@ -236,10 +224,6 @@
 		<data>
 		opoNa4T/5c3hSkdUJstm/2NkXhg=
 		</data>
-		<key>logos/vpayLogo@2x.png</key>
-		<data>
-		idLMRush7nUej/KTrI0I3fW6+NI=
-		</data>
 		<key>ocra.ttf</key>
 		<data>
 		s4jEH34zjr0dj7MFZS0oJKtwhTU=
@@ -262,55 +246,55 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eY4oD27UzVHQli/Sj7PwUYgCU+g=
+			0AEnmUIY1X4+KxWOFkVJM3LyZCw=
 			</data>
 			<key>hash2</key>
 			<data>
-			UelmGS7tHhLLb1n2/NP/CIg+tasPf+WLZLaBSZqmNHU=
+			TO02UT/CtK9gdpQ87kXehMFFjgAM0iao9h7Oq/S/PrY=
 			</data>
 		</dict>
 		<key>SDKPayECCardPaymentAnimationVC.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			YPGt+MCnfsbipUYcDfPUDe9FaDc=
+			chxGY3aDC01w17HArsvKNVNIypo=
 			</data>
 			<key>hash2</key>
 			<data>
-			z83LCI5NVMS4pNvv49qgFUV2T1nwQhxFYUJajdmZEkA=
+			+rJPJyNcl2HSJ/bykcb83Fk3zPDD3GyytCGAEeDWwK4=
 			</data>
 		</dict>
 		<key>SDKPayECCardPaymentAnimationVC.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9UxkXxbHCQzpIRPVxfnATQmjgmU=
+			XyPvDAqDPMr+sRq7jn/zLMDrSc4=
 			</data>
 			<key>hash2</key>
 			<data>
-			NU1BRx8Vq77RgG/dl9TtS/suD60k+uA3fSou7SW5yCc=
+			EfoDMshCC9PbRdslW67ff0XXOjpWeiV8wgS6UZS0jDY=
 			</data>
 		</dict>
 		<key>SDKPayECCardPaymentVC.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jWjRPCM5dK7LfNlT3lKJG/d4dIk=
+			1AgNxQx7ZGywSFekxTxIlGpp3tE=
 			</data>
 			<key>hash2</key>
 			<data>
-			5/ClybkXHSGV4WpAeuIiuT1YEYi8okFxuBvJXGMtSBo=
+			rh3/+J50tY6RlmRfiQwEHJbyN+cBqdARpyia2KPmLSk=
 			</data>
 		</dict>
 		<key>SDKPayECCardPaymentVC.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ycfJAc2DtPA5iVcwILysfajyCaw=
+			GFS1W8syIXQUYXQQpC1LlTx7ddI=
 			</data>
 			<key>hash2</key>
 			<data>
-			DKbZ7JVqOnTKd9rEwYigzsgOHiVL9k9bh3eT5MEtkRo=
+			xxvlw6e5IHPnsTCyw7MBIONIA+CB77JAM9I4kTYfiY0=
 			</data>
 		</dict>
 		<key>SDKPayECOTPCodeVC.nib</key>
@@ -328,11 +312,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AV2lubKrQu/om0ySO7uGKS+5SQs=
+			KkZGAIW+ObIpVUxR5YP0t421EAE=
 			</data>
 			<key>hash2</key>
 			<data>
-			Nrk04CUp0BnXWe2lY37f01X9Fn61t0c7qeuxOb/bVdI=
+			jxAzCe4NKzmXtnHBBBxidEAkSDiNgxP4NvwEjWZpXZ0=
 			</data>
 		</dict>
 		<key>icons/american_express@2x.png</key>
@@ -434,7 +418,7 @@
 			Wnm2hXtYLwyK6wHadPDQUI712LPMcqhzlMnQyhuKG9E=
 			</data>
 		</dict>
-		<key>icons/diners_club2@2x.png</key>
+		<key>icons/diners_club@2x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -443,17 +427,6 @@
 			<key>hash2</key>
 			<data>
 			LI3CCeKfEE6kzx2RupU+L1LEzFgQmnoVcVkNCEXH23A=
-			</data>
-		</dict>
-		<key>icons/diners_club@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Urw0GEKaLjEzP6AlrC5JHC5QCNM=
-			</data>
-			<key>hash2</key>
-			<data>
-			3gepLoq10zv/q9dAlkya8fzPtlR+ec33Lr/WWD7trGg=
 			</data>
 		</dict>
 		<key>icons/discover@2x.png</key>
@@ -665,17 +638,6 @@
 			dsUiE/1LYU5EXIZkR+b7/3WFjW3ow9fhAI0SR8lH1DM=
 			</data>
 		</dict>
-		<key>icons/vpay@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			s0WYiARIuDO9NVlzq9eIakcNjow=
-			</data>
-			<key>hash2</key>
-			<data>
-			MWe1PM/tQNIpu4pKZJmkFowK+2kPH6ZwtFEyHjRIIKs=
-			</data>
-		</dict>
 		<key>images/recognized_back.png</key>
 		<dict>
 			<key>hash</key>
@@ -764,7 +726,7 @@
 			TrCN3RJErwl/oSPKXrGudZaUvKV5a2160XwcLqoOUXY=
 			</data>
 		</dict>
-		<key>logos/dinersLogo2@2x.png</key>
+		<key>logos/dinersLogo@2x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -773,17 +735,6 @@
 			<key>hash2</key>
 			<data>
 			eqgSd4PIEhwlYoPzcXhWGvQGyYsiZpTxuOz9j/EPH4Y=
-			</data>
-		</dict>
-		<key>logos/dinersLogo@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			DUDqtVQ7ad+Gm/VdLr68SgN4PEo=
-			</data>
-			<key>hash2</key>
-			<data>
-			Pq0L79Bc7B12+YXUTbMt7Jno+CNQy426qSED/cceocs=
 			</data>
 		</dict>
 		<key>logos/discoverLogo@2x.png</key>
@@ -883,17 +834,6 @@
 			<key>hash2</key>
 			<data>
 			f8QnVz/mXmBsW9FMSRBSOY3DuBhmMa2EdNMzCLfXnPI=
-			</data>
-		</dict>
-		<key>logos/vpayLogo@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			idLMRush7nUej/KTrI0I3fW6+NI=
-			</data>
-			<key>hash2</key>
-			<data>
-			sW4klsJeJpUFH31M3x2RJBwVFWf9rqnl5QWXmSMnv5Y=
 			</data>
 		</dict>
 		<key>ocra.ttf</key>

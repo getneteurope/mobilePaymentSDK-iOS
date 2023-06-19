@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mGk-0u-Eyt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mGk-0u-Eyt">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,26 +26,16 @@
                                     <action selector="onPay:" destination="juo-wU-jQL" eventType="touchUpInside" id="zJc-MS-oCT"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="versionL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wr2-e2-ocq">
-                                <rect key="frame" x="175" y="826.5" width="64.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Wr2-e2-ocq" firstAttribute="centerX" secondItem="2IC-ad-8b2" secondAttribute="centerX" id="5sg-lm-veH"/>
                             <constraint firstItem="aFg-mS-alX" firstAttribute="centerX" secondItem="2IC-ad-8b2" secondAttribute="centerX" id="ZcA-y7-Bra"/>
-                            <constraint firstItem="pgI-Rv-93k" firstAttribute="top" secondItem="Wr2-e2-ocq" secondAttribute="bottom" constant="15" id="n2B-i6-SCP"/>
-                            <constraint firstItem="Wr2-e2-ocq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="2IC-ad-8b2" secondAttribute="top" id="syW-zi-Jdn"/>
                             <constraint firstItem="aFg-mS-alX" firstAttribute="centerY" secondItem="2IC-ad-8b2" secondAttribute="centerY" id="vjC-0s-n96"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hX7-RG-aVJ"/>
                     <connections>
                         <outlet property="payButton" destination="aFg-mS-alX" id="azz-Ku-K2N"/>
-                        <outlet property="versionL" destination="Wr2-e2-ocq" id="tZC-eq-9Ep"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eVC-xh-LpR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -65,7 +55,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgd-Tf-15W" customClass="SDKPayECAnimatedCardFieldScannerGallery">
-                                <rect key="frame" x="20" y="56" width="374" height="320"/>
+                                <rect key="frame" x="20" y="52" width="374" height="320"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dgd-Tf-15W" secondAttribute="height" multiplier="187:160" id="yoc-Zt-p72"/>
@@ -75,20 +65,20 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jsy-Az-wGN">
-                                <rect key="frame" x="28" y="384" width="30" height="30"/>
+                                <rect key="frame" x="28" y="380" width="30" height="30"/>
                                 <state key="normal" title="Pay"/>
                                 <connections>
                                     <action selector="onPayAction:" destination="EqV-WG-h59" eventType="touchUpInside" id="5gy-2l-UYG"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KZT-cf-AfL">
-                                <rect key="frame" x="186.5" y="422" width="41.5" height="20.5"/>
+                                <rect key="frame" x="186.5" y="418" width="41.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0AV-DI-J0h">
-                                <rect key="frame" x="350" y="384" width="36" height="30"/>
+                                <rect key="frame" x="350" y="380" width="36" height="30"/>
                                 <state key="normal" title="Clear"/>
                                 <connections>
                                     <action selector="onClearAction:" destination="EqV-WG-h59" eventType="touchUpInside" id="uKd-z4-p3U"/>
@@ -140,14 +130,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVb-xP-zDf">
-                                <rect key="frame" x="189" y="217" width="36" height="30"/>
+                                <rect key="frame" x="189" y="213" width="36" height="30"/>
                                 <state key="normal" title="Clear"/>
                                 <connections>
                                     <action selector="onClearAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c1g-88-OWv"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GRX-HT-3ed" customClass="SDKPayECCardFieldScannerGallery">
-                                <rect key="frame" x="20" y="56" width="374" height="70"/>
+                                <rect key="frame" x="20" y="52" width="374" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="Llo-5d-duv"/>
@@ -157,7 +147,7 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jh0-zk-5b6">
-                                <rect key="frame" x="20" y="134" width="374" height="21"/>
+                                <rect key="frame" x="20" y="130" width="374" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="5ua-PJ-83r"/>
                                 </constraints>
@@ -197,7 +187,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mGk-0u-Eyt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jAw-5f-WWY">
-                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
