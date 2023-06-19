@@ -52,7 +52,7 @@ platform :ios do
         contact_email: "example@example.com",
         contact_first_name: "Example",
         contact_last_name: "Example",
-        contact_phone: "+421111111111",
+        contact_phone: "+421907934721",
       },
       localized_app_info: {
         "default": {
@@ -70,7 +70,8 @@ platform :ios do
       },
       uses_non_exempt_encryption: false,
       skip_waiting_for_build_processing: false,
-      groups: ["internalgroup"]
+      groups: ["internalgroup"],
+      submit_beta_review: false
     )
   end
 end
