@@ -3,7 +3,7 @@
 //  SDKPayeCom
 //
 //  Created by Sedlak, Stefan on 11/19/15.
-//  Copyright © 2022 PagoNxt Merchant Solutions S.L. and Santander España Merchant Services, Entidad de Pago, S.L.U.  All rights reserved.
+//  Copyright © 2023 PagoNxt Merchant Solutions S.L. and Santander España Merchant Services, Entidad de Pago, S.L.U. You may not use this file except in compliance with the License which is available at https://mit-license.org/
 //
 
 #import <Foundation/NSObjCRuntime.h>
@@ -18,19 +18,20 @@ typedef NS_ENUM(NSUInteger, SDKPayECCardBrand) {
     SDKPayECCardBrandUndefined = 0,
     
     SDKPayECCardBrandAmex,
-    SDKPayECCardBrandArCa,
-    SDKPayECCardBrandCB,
-    SDKPayECCardBrandCUP,
+    //SDKPayECCardBrandArCa,
+    //SDKPayECCardBrandCB,
+    //SDKPayECCardBrandCUP,
     SDKPayECCardBrandDiners,
-    SDKPayECCardBrandDiscover,
-    SDKPayECCardBrandJCB,
+    //SDKPayECCardBrandDiscover,
+    //SDKPayECCardBrandJCB,
     SDKPayECCardBrandMaestro,
     SDKPayECCardBrandMasterCard,
-    SDKPayECCardBrandMir,
-    SDKPayECCardBrandUATP,
-    SDKPayECCardBrandUzCard,
+    //SDKPayECCardBrandMir,
+    //SDKPayECCardBrandUATP,
+    //SDKPayECCardBrandUzCard,
     SDKPayECCardBrandVisa,
-    SDKPayECCardBrandUPI,
+    //SDKPayECCardBrandUPI,
+    //SDKPayECCardBrandVPay,
 
     /** Total number of values. It is used for validation and handled as invalid value */
     SDKPayECCardBrandTotalNumber

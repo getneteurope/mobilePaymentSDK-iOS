@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.name             = 'Getnet'
-    s.version          = '1.0.0'
-    s.summary          = 'Getneteurope mobile payment SDK - online payments'
+    s.version          = '1.1.0'
+    s.summary          = 'Getneteurope paymentSDK - online payments'
 
     s.description      = <<-DESC
 The library allows online payments processing.
@@ -12,8 +12,10 @@ Supported payment methods:
 - POI/PIA Wire Transfer
 - AliPay Cross-border WAP
 - P24 payments
+- Sofort banking
 Fully integrated with licensed GetNetEurope Payment infrastructure.
 DESC
+
     s.homepage         = 'https://github.com/getneteurope/mobilePaymentSDK-iOS'
     s.documentation_url= 'https://docs.getneteurope.com/MobilePaymentSDK.html'
     s.license          = { :type => 'MIT' }
@@ -34,6 +36,11 @@ DESC
         ss.dependency            'Getnet/WireTransfer'
         ss.dependency            'Getnet/Alipay'
         ss.dependency            'Getnet/P24'
+        ss.dependency            'Getnet/RatePay'
+        ss.dependency            'Getnet/Sofort'
+        ss.dependency            'Getnet/Blik'
+        ss.dependency            'Getnet/Bizum'
+
     end
 
     s.subspec 'Core' do |ss|
@@ -47,6 +54,10 @@ DESC
         ss.ios.dependency        'MBProgressHUD', '~> 1.2.0'
         ss.dependency            'libextobjc/EXTScope', '~> 0.6.0'
         ss.ios.dependency        'TPKeyboardAvoiding', '~> 1.3.5'
+        ss.dependency            'MaterialComponents/TextControls+FilledTextAreas'
+        ss.dependency            'MaterialComponents/TextControls+FilledTextFields'
+        ss.dependency            'MaterialComponents/TextControls+FilledTextAreasTheming'
+        ss.dependency            'MaterialComponents/TextControls+FilledTextFieldsTheming'
 
         ss.ios.frameworks      = 'Foundation', 'UIKit', 'Security'
         ss.libraries           = 'xml2'
@@ -135,7 +146,7 @@ DESC
         ss.dependency            'Getnet/IBANScanner'
         ss.dependency            'Getnet/PhotoGallery'
     end
-    
+
     s.subspec 'WireTransfer' do |ss|
         ss.vendored_frameworks = 'eCom/SDKPayeComWireTransfer.framework'
         ss.resource            = 'eCom/SDKPayeComWireTransfer.framework/SDKPayeComWireTransfer.bundle'
@@ -143,6 +154,33 @@ DESC
         ss.dependency            'Getnet/Core'
     end
 
-      s.default_subspecs = 'All', 'CardScannerGallery'
+    s.subspec 'RatePay' do |ss|
+        ss.vendored_frameworks = 'eCom/SDKPayeComRatePay.framework'
+        ss.resource            = 'eCom/SDKPayeComRatePay.framework/SDKPayeComRatePay.bundle'
+
+        ss.dependency            'Getnet/Core'
+    end
+
+    s.subspec 'Sofort' do |ss|
+        ss.vendored_frameworks = 'eCom/SDKPayeComSofort.framework'
+
+        ss.dependency            'Getnet/Core'
+    end
+
+    s.subspec 'Blik' do |ss|
+        ss.vendored_frameworks = 'eCom/SDKPayeComBlik.framework'
+        ss.resource            = 'eCom/SDKPayeComBlik.framework/SDKPayeComBlik.bundle'
+
+        ss.dependency            'Getnet/Core'
+    end
+
+    s.subspec 'Bizum' do |ss|
+        ss.vendored_frameworks = 'eCom/SDKPayeComBizum.framework'
+        ss.resource            = 'eCom/SDKPayeComBizum.framework/SDKPayeComBizum.bundle'
+
+        ss.dependency            'Getnet/Core'
+    end
+
+    s.default_subspecs = 'All', 'CardScannerGallery'
 
 end
