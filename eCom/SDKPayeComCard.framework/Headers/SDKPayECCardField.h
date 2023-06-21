@@ -3,7 +3,7 @@
 //  SDKPayeCom
 //
 //  Created by Sedlak, Stefan on 4/12/16.
-//  Copyright © 2023 PagoNxt Merchant Solutions S.L. and Santander España Merchant Services, Entidad de Pago, S.L.U. You may not use this file except in compliance with the License which is available at https://mit-license.org/
+//  Copyright © 2022 PagoNxt Merchant Solutions S.L. and Santander España Merchant Services, Entidad de Pago, S.L.U.  All rights reserved.
 //
 
 #import <UIKit/UITextField.h>
@@ -204,7 +204,7 @@ typedef NS_ENUM(NSUInteger, SDKPayECCardFieldState) {
  *  @brief Set of supported card brands.
  *  @details If supportedCardBrands is set and does not contain recognized card brand of user card number the state changes to ::SDKPayECCardFieldStateCardUnsupported. Set can contain NSNumbers with ::SDKPayECCardBrand values. Example:
  
- cardField.supportedCardBrands = [NSSet setWithObjects:@(SDKPayECCardBrandAmex), @(SDKPayECCardBrandMasterCard), @(SDKPayECCardBrandVisa, SDKPayECCardBrandMaestro), @(SDKPayECCardBrandDiners), nil];
+ cardField.supportedCardBrands = [NSSet setWithObjects:@(SDKPayECCardBrandAmex), @(SDKPayECCardBrandMasterCard), @(SDKPayECCardBrandVisa), nil];
  
  */
 @property(nonatomic, copy, nullable) NSArray<NSNumber *> *supportedCardBrands;

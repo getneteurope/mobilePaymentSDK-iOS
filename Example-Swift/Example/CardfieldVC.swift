@@ -3,15 +3,13 @@
 //  Embedded
 //
 //  Created by Vrana, Jozef on 3/6/17.
-//  Copyright © 2023 PagoNxt Merchant Solutions S.L. and Santander España Merchant Services, Entidad de Pago, S.L.U. You may not use this file except in compliance with the License which is available at https://mit-license.org/
+//  Copyright © 2022 PagoNxt Merchant Solutions S.L. and Santander España Merchant Services, Entidad de Pago, S.L.U.  All rights reserved.
 //
 
 import SDKPayeComCard
 import SDKPayeComCardScannerGallery
 
 let AMOUNT = NSDecimalNumber.init(mantissa: 199, exponent: -2, isNegative: false)
-let AMOUNTBIGGERTHEN5 = NSDecimalNumber.init(mantissa: 800, exponent: -2, isNegative: false)
-let AMOUNT10 = NSDecimalNumber.init(mantissa: 1000, exponent: -2, isNegative: false)
 
 class CardfieldVC: PaymemtVC, UIActionSheetDelegate, SDKPayECCardFieldDelegate {
     
@@ -102,24 +100,18 @@ class CardfieldVC: PaymemtVC, UIActionSheetDelegate, SDKPayECCardFieldDelegate {
         payment.amount = AMOUNT
         payment.currency = "USD"
         payment.transactionType = .purchase
+        /**
+        @Warning: We ask you to never share your Secret Key with anyone, or store it inside your application or phone. This is crucial to ensure the security of your transactions.
+        You will be generating the signature on your own server’s backend, as it is the only place where you will store your Secret Key.
+        */
+        let SDKPay_MERCHANT_ACCOUNT_ID = "5918caa1-a576-49e3-ae0a-cb677631ee92"
+        let SDKPay_MERCHANT_SECRET_KEY = "9a6c4f34-4156-47b7-9022-3f6d18147cd2"
         
-        payment.versionThreeD = "2.1.0"
-        payment.attemptThreeD = .yes
-        
+        self.merchantSignedPaymentByMerchantSecretKey(merchantAccountID: SDKPay_MERCHANT_ACCOUNT_ID, payment: payment, merchantSecretKey: SDKPay_MERCHANT_SECRET_KEY)
         let accountHolder = SDKPayECCustomerData()
         accountHolder.firstName = "John"
         accountHolder.lastName = "Doe"
-        accountHolder.email = "john.doe@email.com"
         payment.accountHolder = accountHolder
-        
-        /**
-         @Warning: We ask you to never share your Secret Key with anyone, or store it inside your application or phone. This is crucial to ensure the security of your transactions.
-         You will be generating the signature on your own server’s backend, as it is the only place where you will store your Secret Key.
-         */
-        let SDKPay_MERCHANT_ACCOUNT_ID = "5c4a8a42-04a8-4970-a595-262f0ba0a108"
-        let SDKPay_MERCHANT_SECRET_KEY = "5ac555d4-e7f7-409f-8147-d82c8c10ed53"
-        
-        self.merchantSignedPaymentByMerchantSecretKey(merchantAccountID: SDKPay_MERCHANT_ACCOUNT_ID, payment: payment, merchantSecretKey: SDKPay_MERCHANT_SECRET_KEY)
         
         return payment
     }
