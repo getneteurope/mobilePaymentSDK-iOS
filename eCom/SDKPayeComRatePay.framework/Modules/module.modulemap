@@ -1,0 +1,6 @@
+framework module SDKPayeComRatePay {
+  umbrella header "SDKPayeComRatePay.h"
+
+  export *
+  module * { export * }
+}
