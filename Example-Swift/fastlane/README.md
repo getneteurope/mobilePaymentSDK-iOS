@@ -15,6 +15,14 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 ## iOS
 
+### ios bumpVersion
+
+```sh
+[bundle exec] fastlane ios bumpVersion
+```
+
+Bumps version
+
 ### ios buildTestfairy
 
 ```sh

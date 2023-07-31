@@ -7,7 +7,6 @@
 //
 
 #import <SDKPayeCom/SDKPayeCom.h>
-#import <SDKPayeComBizum/SDKPayECBrowser.h>
 
 @interface SDKPayECBizumPayment : SDKPayECPayment
 

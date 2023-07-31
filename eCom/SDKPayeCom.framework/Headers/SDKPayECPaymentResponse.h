@@ -8,6 +8,7 @@
 
 #import <SDKPayeCom/SDKPayECPayment.h>
 #import <SDKPayeCom/SDKPayECTransactionState.h>
+#import <SDKPayeCom/SDKPayECSubMerchantInfo.h>
 
 /** @addtogroup ios_sdk
  *  @{
@@ -33,6 +34,13 @@
 
 /** A unique identifier assigned for every provider transaction. */
 @property (strong, nonatomic, nullable) NSString *providerTransactionReferenceId;
+
+/**Info about particular merchant.  */
+@property (strong, nonatomic, nullable) SDKPayECSubMerchantInfo *subMerchantInfo;
+
+/** Expiration date. */
+@property (strong, nonatomic, nullable) NSDate *expirationDate;
+
 
 @end
 

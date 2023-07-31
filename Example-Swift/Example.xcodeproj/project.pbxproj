@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 53;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -149,9 +149,8 @@
 		ACADC12D1E6D884200DB078F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1320;
 				ORGANIZATIONNAME = "Vrana, Jozef";
 				TargetAttributes = {
 					ACADC1341E6D884200DB078F = {
@@ -164,9 +163,10 @@
 			};
 			buildConfigurationList = ACADC1301E6D884200DB078F /* Build configuration list for PBXProject "Example" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = en;
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 				de,
@@ -226,31 +226,37 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/MLKitTextRecognition/LatinOCRResources.bundle",
 				"${PODS_ROOT}/../../SDKPayeCom/output/eCom/SDKPayeComBizum.framework/SDKPayeComBizum.bundle",
 				"${PODS_ROOT}/../../SDKPayeCom/output/eCom/SDKPayeComBlik.framework/SDKPayeComBlik.bundle",
 				"${PODS_ROOT}/../../SDKPayeCom/output/eCom/SDKPayeComCard.framework/SDKPayeComCard.bundle",
 				"${PODS_ROOT}/../../SDKPayeCom/output/eCom/SDKPayeComCardScanner.framework/SDKPayeComCardScanner.bundle",
 				"${PODS_ROOT}/../../SDKPayeCom/output/eCom/SDKPayeComCardScannerGallery.framework/SDKPayeComCardScannerGallery.bundle",
 				"${PODS_ROOT}/../../SDKPayeCom/output/eCom/SDKPayeCom.framework/SDKPayeCom.bundle",
+				"${PODS_ROOT}/../../SDKPayeCom/output/eCom/SDKPayeComIdeal.framework/SDKPayeComIdeal.bundle",
+				"${PODS_ROOT}/../../SDKPayeCom/output/eCom/SDKPayeComMBWay.framework/SDKPayeComMBWay.bundle",
 				"${PODS_ROOT}/../../SDKPayeCom/output/eCom/SDKPayeComRatePay.framework/SDKPayeComRatePay.bundle",
 				"${PODS_ROOT}/../../SDKPayeCom/output/eCom/SDKPayeComSEPA.framework/SDKPayeComSEPA.bundle",
 				"${PODS_ROOT}/../../SDKPayeCom/output/eCom/SDKPayeComScanner.framework/SDKPayeComScanner.bundle",
 				"${PODS_ROOT}/../../SDKPayeCom/output/eCom/SDKPayeComWireTransfer.framework/SDKPayeComWireTransfer.bundle",
+				"${PODS_ROOT}/../../SDKPayeCom/output/eCom/SDKPayeComZinia.framework/SDKPayeComZinia.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MLKitTextRecognition/LatinOCRResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LatinOCRResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SDKPayeComBizum.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SDKPayeComBlik.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SDKPayeComCard.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SDKPayeComCardScanner.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SDKPayeComCardScannerGallery.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SDKPayeCom.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SDKPayeComIdeal.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SDKPayeComMBWay.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SDKPayeComRatePay.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SDKPayeComSEPA.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SDKPayeComScanner.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SDKPayeComWireTransfer.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SDKPayeComZinia.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LatinOCRResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -278,7 +284,6 @@
 				"${BUILT_PRODUCTS_DIR}/Mantle/Mantle.framework",
 				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
 				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
 				"${BUILT_PRODUCTS_DIR}/libextobjc/libextobjc.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -299,7 +304,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mantle.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libextobjc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -434,12 +438,9 @@
 				INFOPLIST_FILE = Example/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 PagoNxt Merchant Solutions S.L. and Santander España Merchant Services, Entidad de Pago, S.L.U.  \nYou may not use this file except in compliance with the License which is available at https://mit-license.org/";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 2.1.2;
+				MARKETING_VERSION = 2.0.35;
 				PRODUCT_BUNDLE_IDENTIFIER = com.axelgate.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "example adhoc";
@@ -560,8 +561,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -580,12 +580,9 @@
 				INFOPLIST_FILE = Example/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 PagoNxt Merchant Solutions S.L. and Santander España Merchant Services, Entidad de Pago, S.L.U.  \nYou may not use this file except in compliance with the License which is available at https://mit-license.org/";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 2.1.2;
+				MARKETING_VERSION = 2.0.35;
 				PRODUCT_BUNDLE_IDENTIFIER = com.axelgate.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -611,12 +608,9 @@
 				INFOPLIST_FILE = Example/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 PagoNxt Merchant Solutions S.L. and Santander España Merchant Services, Entidad de Pago, S.L.U.  \nYou may not use this file except in compliance with the License which is available at https://mit-license.org/";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 2.1.2;
+				MARKETING_VERSION = 2.0.35;
 				PRODUCT_BUNDLE_IDENTIFIER = com.axelgate.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
