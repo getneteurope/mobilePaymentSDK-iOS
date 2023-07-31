@@ -1,9 +1,15 @@
 default_platform(:ios)
 
 platform :ios do
+  desc "Bumps version"
+  lane :bumpVersion do |options|
+    increment_version_number(
+      bump_type: "patch" # Automatically increment patch version number
+  )
+  end
   desc "Builds and deploys Example App to TestFairy"
   lane :buildTestfairy do
-    sh("pod install")
+    cocoapods(clean: true, use_bundle_exec: false)
     version = get_version_number(xcodeproj: "Example.xcodeproj")
     build_number = get_build_number(xcodeproj: "Example.xcodeproj")
     build_app(
@@ -26,7 +32,7 @@ platform :ios do
   end
   desc "Builds and deploys Example App to TestFlight"
   lane :buildTestflight do |options|
-    sh("pod install")
+    cocoapods(clean: true, use_bundle_exec: false)
     version = get_version_number(xcodeproj: "Example.xcodeproj")
     build_number = get_build_number(xcodeproj: "Example.xcodeproj")
     build_app(
@@ -52,7 +58,7 @@ platform :ios do
         contact_email: "example@example.com",
         contact_first_name: "Example",
         contact_last_name: "Example",
-        contact_phone: "+421907934721",
+        contact_phone: "+421111111111",
       },
       localized_app_info: {
         "default": {
@@ -70,8 +76,7 @@ platform :ios do
       },
       uses_non_exempt_encryption: false,
       skip_waiting_for_build_processing: false,
-      groups: ["internalgroup"],
-      submit_beta_review: false
+      groups: ["internalgroup"]
     )
   end
 end

@@ -33,6 +33,11 @@
 @property (assign, nonatomic) SDKPayECBool attemptThreeD;
 
 /**
+ @brief It describes browser properties.
+ */
+@property (strong, nonatomic, nullable) SDKPayECBrowser *browser;
+
+/**
  @brief It describes recurring transactions.
  */
 @property (strong, nonatomic, nullable) SDKPayECPeriodic *periodic;

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'Getnet'
-    s.version          = '1.1.1'
+    s.version          = '1.2.0'
     s.summary          = 'Getneteurope paymentSDK - online payments'
 
     s.description      = <<-DESC
@@ -12,12 +12,18 @@ Supported payment methods:
 - POI/PIA Wire Transfer
 - AliPay Cross-border WAP
 - P24 payments
+- iDeal payments
 - Sofort banking
+- RatePay Direct Debit and Invoice banking
+- Blick banking
+- Bizum banking
+- MB Way banking
+- MB Referencia (Multibanco) banking
+- Zinia banking
 Fully integrated with licensed GetNetEurope Payment infrastructure.
 DESC
 
     s.homepage         = 'https://github.com/getneteurope/mobilePaymentSDK-iOS'
-    s.documentation_url= 'https://docs.getneteurope.com/MobilePaymentSDK.html'
     s.license          = { :type => 'MIT' }
     s.authors          = { 'GetNetEurope' => 'connect@getneteurope.com' }
     s.source           = { :git => 'https://github.com/getneteurope/mobilePaymentSDK-iOS.git', :tag => "v#{s.version}" }
@@ -36,11 +42,14 @@ DESC
         ss.dependency            'Getnet/WireTransfer'
         ss.dependency            'Getnet/Alipay'
         ss.dependency            'Getnet/P24'
-        ss.dependency            'Getnet/RatePay'
+        ss.dependency            'Getnet/Ideal'
         ss.dependency            'Getnet/Sofort'
+        ss.dependency            'Getnet/RatePay'
         ss.dependency            'Getnet/Blik'
         ss.dependency            'Getnet/Bizum'
-
+        ss.dependency            'Getnet/MBWay'
+        ss.dependency            'Getnet/Zinia'
+        ss.dependency            'Getnet/MBReferencia'
     end
 
     s.subspec 'Core' do |ss|
@@ -48,12 +57,12 @@ DESC
         ss.resource            = 'eCom/SDKPayeCom.framework/SDKPayeCom.bundle'
 
         ss.dependency            'AFNetworking', '~> 4.0.1'
-        ss.dependency            'CocoaLumberjack', '~> 3.7.4'
+        ss.dependency            'CocoaLumberjack', '~> 3.6.1'
         ss.ios.dependency        'Lockbox', '~> 3.0.6'
-        ss.dependency            'Mantle', '~> 2.1.6'
+        ss.dependency            'Mantle', '~> 2.1.1'
         ss.ios.dependency        'MBProgressHUD', '~> 1.2.0'
         ss.dependency            'libextobjc/EXTScope', '~> 0.6.0'
-        ss.ios.dependency        'TPKeyboardAvoiding', '~> 1.3.5'
+        ss.ios.dependency        'TPKeyboardAvoiding', '~> 1.3.3'
         ss.dependency            'MaterialComponents/TextControls+FilledTextAreas'
         ss.dependency            'MaterialComponents/TextControls+FilledTextFields'
         ss.dependency            'MaterialComponents/TextControls+FilledTextAreasTheming'
@@ -154,15 +163,22 @@ DESC
         ss.dependency            'Getnet/Core'
     end
 
-    s.subspec 'RatePay' do |ss|
-        ss.vendored_frameworks = 'eCom/SDKPayeComRatePay.framework'
-        ss.resource            = 'eCom/SDKPayeComRatePay.framework/SDKPayeComRatePay.bundle'
+    s.subspec 'Ideal' do |ss|
+        ss.vendored_frameworks = 'eCom/SDKPayeComIdeal.framework'
+        ss.resource            = 'eCom/SDKPayeComIdeal.framework/SDKPayeComIdeal.bundle'
 
         ss.dependency            'Getnet/Core'
     end
 
     s.subspec 'Sofort' do |ss|
         ss.vendored_frameworks = 'eCom/SDKPayeComSofort.framework'
+
+        ss.dependency            'Getnet/Core'
+    end
+
+    s.subspec 'RatePay' do |ss|
+        ss.vendored_frameworks = 'eCom/SDKPayeComRatePay.framework'
+        ss.resource            = 'eCom/SDKPayeComRatePay.framework/SDKPayeComRatePay.bundle'
 
         ss.dependency            'Getnet/Core'
     end
@@ -180,6 +196,27 @@ DESC
 
         ss.dependency            'Getnet/Core'
     end
+
+    s.subspec 'MBWay' do |ss|
+        ss.vendored_frameworks = 'eCom/SDKPayeComMBWay.framework'
+        ss.resource            = 'eCom/SDKPayeComMBWay.framework/SDKPayeComMBWay.bundle'
+
+        ss.dependency            'Getnet/Core'
+    end
+
+    s.subspec 'Zinia' do |ss|
+        ss.vendored_frameworks = 'eCom/SDKPayeComZinia.framework'
+        ss.resource            = 'eCom/SDKPayeComZinia.framework/SDKPayeComZinia.bundle'
+
+        ss.dependency            'Getnet/Core'
+    end
+    
+    s.subspec 'MBReferencia' do |ss|
+        ss.vendored_frameworks = 'eCom/SDKPayeComMBReferencia.framework'
+
+        ss.dependency            'Getnet/Core'
+    end
+
 
     s.default_subspecs = 'All', 'CardScannerGallery'
 
