@@ -1,0 +1,6 @@
+framework module SDKPayeComZinia {
+  umbrella header "SDKPayeComZinia.h"
+
+  export *
+  module * { export * }
+}

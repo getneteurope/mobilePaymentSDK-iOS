@@ -67,6 +67,9 @@ typedef NS_ENUM (NSUInteger, SDKPayECPaymentMethodName) {
     
     /** Zinia */
     SDKPayECPaymentMethodNameZinia,
+    
+    /** Multibanco */
+    SDKPayECPaymentMethodMBReferencia,
 
     /** Total number of values. It is used for validation and handled as invalid value */
     SDKPayECPaymentMethodNameTotalNumber

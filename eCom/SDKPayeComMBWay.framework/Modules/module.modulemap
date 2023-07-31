@@ -1,0 +1,6 @@
+framework module SDKPayeComMBWay {
+  umbrella header "SDKPayeComMBWay.h"
+
+  export *
+  module * { export * }
+}

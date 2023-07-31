@@ -22,7 +22,7 @@
  @brief Street line 1
  @details It is mandatory. Max. length is 128
  */
-@property (strong, nonatomic, nonnull ) NSString *street1;
+@property (strong, nonatomic, nullable ) NSString *street1;
 /**
  @brief Street line 2
  @details It is optional. Max. length is 128
@@ -37,7 +37,7 @@
  @brief City
  @details It is required. Max. length is 32
  */
-@property (strong, nonatomic, nonnull ) NSString *city;
+@property (strong, nonatomic, nullable ) NSString *city;
 /**
  @brief State
  @details It is optional. Max. length is 32

@@ -1,0 +1,6 @@
+framework module SDKPayeComMBReferencia {
+  umbrella header "SDKPayeComMBReferencia.h"
+
+  export *
+  module * { export * }
+}

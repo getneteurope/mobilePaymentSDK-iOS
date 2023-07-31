@@ -15,5 +15,4 @@ FOUNDATION_EXPORT double BizumVersionNumber;
 FOUNDATION_EXPORT const unsigned char BizumVersionString[];
 
 #import <SDKPayeComBizum/SDKPayECBizumPayment.h>
-#import <SDKPayeComBizum/SDKPayECBrowser.h>
 

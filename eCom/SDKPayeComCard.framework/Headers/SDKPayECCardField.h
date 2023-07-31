@@ -167,19 +167,19 @@ typedef NS_ENUM(NSUInteger, SDKPayECCardFieldState) {
  *  @brief The placeholder for the card number field.
  *  @details Default is localized @"Credit Card Number".
  */
-@property(nonatomic, copy, null_resettable) /*IBInspectable*/ NSString *numberPlaceholder;
+@property(nonatomic, copy, nullable) /*IBInspectable*/ NSString *numberPlaceholder;
 
 /**
  *  @brief The placeholder for the expiration month field.
  *  @details Defaults to localized @"MM".
  */
-@property(nonatomic, copy, null_resettable) /*IBInspectable*/ NSString *expirationMonthPlaceholder;
+@property(nonatomic, copy, nullable) /*IBInspectable*/ NSString *expirationMonthPlaceholder;
 
 /**
  *  @brief The placeholder for the expiration year field.
  *  @details Defaults to localized @"YY".
  */
-@property(nonatomic, copy, null_resettable) /*IBInspectable*/ NSString *expirationYearPlaceholder;
+@property(nonatomic, copy, nullable) /*IBInspectable*/ NSString *expirationYearPlaceholder;
 
 /**
  *  @brief The placeholder for the security code field.

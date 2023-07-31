@@ -43,6 +43,7 @@ FOUNDATION_EXPORT const unsigned char SDKPayeComVersionString[];
 #import <SDKPayeCom/SDKPayECCustomFields.h>
 #import <SDKPayeCom/SDKPayECCustomField.h>
 #import <SDKPayeCom/SDKPayECEntryMode.h>
+#import <SDKPayeCom/SDKPayECBrowser.h>
 
 
 // UIAppearance elements
