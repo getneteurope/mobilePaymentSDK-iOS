@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'Getnet'
-    s.version          = '1.2.0'
+    s.version          = '1.2.1'
     s.summary          = 'Getneteurope paymentSDK - online payments'
 
     s.description      = <<-DESC

@@ -533,7 +533,7 @@ class ViewController: PaymemtVC, UIActionSheetDelegate {
         payment.order = order
         
         let SDKPay_MERCHANT_ACCOUNT_ID = "1da76824-e28a-4b64-8f41-c74a0a0e0c0c"
-        let SDKPay_MERCHANT_SECRET_KEY = "bb3ec883-9c5b-4e70-beff-c3151b17ecf4"
+        let SDKPay_MERCHANT_SECRET_KEY = "fb9d2b5d-e89b-427b-be66-2c4704378908"
 
         self.merchantSignedPaymentByMerchantSecretKey(merchantAccountID: SDKPay_MERCHANT_ACCOUNT_ID, payment: payment, merchantSecretKey: SDKPay_MERCHANT_SECRET_KEY)
         
