@@ -75,8 +75,7 @@ platform :ios do
         }
       },
       uses_non_exempt_encryption: false,
-      skip_waiting_for_build_processing: false,
-      groups: ["internalgroup"]
+      skip_waiting_for_build_processing: true
     )
   end
 end
